@@ -15,7 +15,7 @@ public class DoorOpen : MonoBehaviour
 
     public void openDoor()
     {
-      
+
         door.Play("DoorOpen");
 
     }

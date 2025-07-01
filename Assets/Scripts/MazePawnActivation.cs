@@ -5,6 +5,7 @@ using UnityEngine;
 public class MazePawnActivation : MonoBehaviour
 {
     public GameObject objectToActivate;
+    public AudioSource audioSource;
     private bool hasActivated = false;
 
     private void OnCollisionEnter(Collision collision)
@@ -13,6 +14,11 @@ public class MazePawnActivation : MonoBehaviour
         {
             objectToActivate.SetActive(true);
             hasActivated = true;
+
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

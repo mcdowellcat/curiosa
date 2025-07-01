@@ -6,12 +6,17 @@ public class BallMover : MonoBehaviour
 {
     public float moveSpeed = 0.3f; // units per second
     private Vector3 moveDirection = Vector3.zero;
+    public AudioSource audioSource;
 
     void Update()
     {
         if (moveDirection != Vector3.zero)
         {
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 

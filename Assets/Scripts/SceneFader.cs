@@ -8,10 +8,11 @@ public class SceneFader : MonoBehaviour
     public CanvasGroup fadeCanvasGroup; // fade Image's CanvasGroup 
     public float fadeDuration = 3.0f;  // Duration of fade in/out
     public string sceneToLoad;  // The scene name you want to load
+    public AudioSource audioSource;
 
     public void ChangeScene()
     {
-         StartCoroutine(FadeAndChangeScene());
+        StartCoroutine(FadeAndChangeScene());
     }
 
     IEnumerator FadeAndChangeScene()
@@ -27,6 +28,7 @@ public class SceneFader : MonoBehaviour
 
         // Fade in
         yield return StartCoroutine(Fade(0f));
+        audioSource.Play();
     }
 
     IEnumerator Fade(float targetAlpha)

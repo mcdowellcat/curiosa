@@ -440,6 +440,8 @@ GameObject:
   - component: {fileID: 7072478885652658473}
   - component: {fileID: 7233030077961151750}
   - component: {fileID: 3014095192372719694}
+  - component: {fileID: 5650969999586622647}
+  - component: {fileID: 7524856240942312371}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -514,6 +516,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PokeAttachPoint: {fileID: 7072478885644867269}
+--- !u!65 &5650969999586622647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072478885645355679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11743803, y: 0.036091324, z: 0.17440285}
+  m_Center: {x: -0.033601534, y: 0.042717565, z: 0.0059875213}
+--- !u!54 &7524856240942312371
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7072478885645355679}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &7072478885645355745
 GameObject:
   m_ObjectHideFlags: 0

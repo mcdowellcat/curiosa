@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 773450073984552677}
   - component: {fileID: 309025824126751210}
   - component: {fileID: 875841439186393132}
+  - component: {fileID: 6960477834707766641}
   m_Layer: 0
   m_Name: rust_key
   m_TagString: Untagged
@@ -70,6 +71,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 1a7c6b13b8983fa4bbfb1dbfbb5fef57, type: 2}
+  - {fileID: 2100000, guid: 9e1335f5dc5c94597b2748109b67aec5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -643,6 +645,19 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_ButtonPressPoint: 0.5
+--- !u!114 &6960477834707766641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374289202576707483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbed0429158e4b608186ca25320f59f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetRenderer: {fileID: 0}
 --- !u!1 &6050573755964034518
 GameObject:
   m_ObjectHideFlags: 0

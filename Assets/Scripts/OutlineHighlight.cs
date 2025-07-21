@@ -7,6 +7,7 @@ public class OutlineHighlight : MonoBehaviour
     private MaterialPropertyBlock propBlock;
 
     private int highlightID;
+    private bool isGrabbed = false;
 
     void Awake()
     {
@@ -20,9 +21,28 @@ public class OutlineHighlight : MonoBehaviour
 
         if (interactable != null)
         {
-            interactable.hoverEntered.AddListener(_ => SetHighlight(true));
-            interactable.hoverExited.AddListener(_ => SetHighlight(false));
+            interactable.hoverEntered.AddListener(_ => OnHoverEntered());
+            interactable.hoverExited.AddListener(_ => OnHoverExited());
+            interactable.selectEntered.AddListener(_ => OnGrab());
+            interactable.selectExited.AddListener(_ => OnRelease());
         }
+    }
+
+    void OnHoverEntered()
+    {
+        if (!isGrabbed)
+            SetHighlight(true);
+    }
+
+    void OnHoverExited()
+    {
+        SetHighlight(false);
+    }
+
+    void OnGrab()
+    {
+        isGrabbed = true;
+        SetHighlight(false); // turn off glow immediately when grabbed
     }
 
     void SetHighlight(bool on)
@@ -30,5 +50,10 @@ public class OutlineHighlight : MonoBehaviour
         targetRenderer.GetPropertyBlock(propBlock, 1); // index 1 = second material slot
         propBlock.SetFloat(highlightID, on ? 1f : 0f);
         targetRenderer.SetPropertyBlock(propBlock, 1);
+    }
+
+    void OnRelease()
+    {
+        isGrabbed = false;
     }
 }

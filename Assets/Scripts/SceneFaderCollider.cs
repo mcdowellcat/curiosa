@@ -27,6 +27,9 @@ public class SceneFaderCollider : MonoBehaviour
         yield return StartCoroutine(Fade(1f));
 
         // Load the scene
+
+        Debug.Log($"[SceneFaderCollider] Loading scene: {sceneToLoad}");
+
         SceneManager.LoadScene(sceneToLoad);
 
         // Wait a bit for the scene to load

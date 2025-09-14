@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/01 Main Menu.unity
     guid: 43602965ff0ac4cb38f5bfa1445311f0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/02 LoopOne.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/04 LoopThree.unity
     guid: 18876d6bc74fd4a628e541d904578673
+  - enabled: 1
+    path: Assets/Scenes/05 Exit.unity
+    guid: 7ac57ec23cfa348cc9f86318dc8c2df4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3ede8262ee761433ab7190bb8d584a27,
       type: 2}
